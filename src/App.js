@@ -8,7 +8,7 @@ function App() {
     e.preventDefault();
     try {
       // Sending POST request to backend
-      const response = await axios.post("http://localhost:5000/submit", { name });
+      const response = await axios.post("https://backend-mnur.onrender.com/submit", { name });
       alert(response.data.message); // Show alert with message from backend
     } catch (error) {
       alert("Error: " + (error.response ? error.response.data.message : "Something went wrong!"));
